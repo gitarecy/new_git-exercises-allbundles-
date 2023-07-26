@@ -130,4 +130,121 @@ To https://github.com/gitarecy/git-exercises-allbundles.git
  * [new branch]      dev -> dev
 branch 'dev' set up to track 'origin/dev'.
 
-=============================================================================================================
+
+Exercise 2
+==========
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ vi home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git add .
+warning: in the working copy of 'home.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash save 'changes to home.html page'
+Saved working directory and index state On dev: changes to home.html page
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ vi about.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git  add .
+warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash save 'changes to about.html page'
+Saved working directory and index state On dev: changes to about.html page
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ vi team.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git add .
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash save 'changes to team.html page'
+Saved working directory and index state On dev: changes to team.html page
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash list
+stash@{0}: On dev: changes to team.html page
+stash@{1}: On dev: changes to about.html page
+stash@{2}: On dev: changes to home.html page
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is ahead of 'origin/dev' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (745061279a26c1536681b03e5b298f41d23bfcd4)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash list
+stash@{0}: On dev: changes to team.html page
+stash@{1}: On dev: changes to home.html page
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash pop stash@{1}
+On branch dev
+Your branch is ahead of 'origin/dev' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (43da3d1d0343ca2d01cc516c52552c48303bbb8c)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git commit -m 'changes to home and about pages'
+[dev dec78d8] changes to home and about pages
+ 2 files changed, 24 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 822 bytes | 822.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/gitarecy/git-exercises-allbundles.git
+   bf8b086..dec78d8  dev -> dev
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash list
+stash@{0}: On dev: changes to team.html page
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git stash pop stash@{0}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (3a63958ee3a0209e2760dbca0e3c5433cc515911)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ git reset --hard HEAD
+HEAD is now at dec78d8 changes to home and about pages
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
+$ ls
+about.html  file.txt  home.html  test.txt
+
