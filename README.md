@@ -1,8 +1,9 @@
 # git-exercises-allbundles
-BUNDLE 1
-========
-Exercise 1
-=========
+
+## BUNDLE 1
+
+### Exercise 1
+
 ```bash
 $ cd Desktop/Git-exercises/
 
@@ -131,10 +132,11 @@ To https://github.com/gitarecy/git-exercises-allbundles.git
  * [new branch]      dev -> dev
 branch 'dev' set up to track 'origin/dev'.
 
+```
 
-Exercise 2
-==========
+### Exercise 2
 
+```bash
 LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
 $ vi home.html
 
