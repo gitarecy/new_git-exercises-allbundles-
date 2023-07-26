@@ -3,6 +3,7 @@ BUNDLE 1
 ========
 Exercise 1
 =========
+```bash
 $ cd Desktop/Git-exercises/
 
 LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
@@ -247,4 +248,4 @@ HEAD is now at dec78d8 changes to home and about pages
 LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
 $ ls
 about.html  file.txt  home.html  test.txt
-
+```
