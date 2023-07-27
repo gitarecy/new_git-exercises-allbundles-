@@ -252,9 +252,9 @@ $ ls
 about.html  file.txt  home.html  test.txt
 ```
 
-##Bundle 2
+## BUNDLE 2
 
-###Exercise 1
+### Exercise 1
 
 ```bash
 LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
