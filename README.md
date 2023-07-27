@@ -251,3 +251,47 @@ LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (dev)
 $ ls
 about.html  file.txt  home.html  test.txt
 ```
+
+##Bundle 2
+
+###Exercise 1
+
+```bash
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/bundle-2)
+$ vi services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/bundle-2)
+$ git add .
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/bundle-2)
+$ git commit -m 'added services page'
+[ft/bundle-2 dae678f] added services page
+ 1 file changed, 9 insertions(+)
+ create mode 100644 services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/gitarecy/git-exercises-allbundles/pull/new/ft/bundle-2
+remote:
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
+
+###Exercise 2
+
+```bash
+
+```
