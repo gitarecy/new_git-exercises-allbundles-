@@ -290,7 +290,579 @@ To https://github.com/gitarecy/git-exercises-allbundles.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
 
-###Exercise 2
+### Exercise 2
+
+```bash
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git checkout main\
+> ^C
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git pull
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 18 (delta 5), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (18/18), 5.95 KiB | 96.00 KiB/s, done.
+From https://github.com/gitarecy/git-exercises-allbundles
+   1973994..ea6e06b  main       -> origin/main
+Updating 1973994..ea6e06b
+Fast-forward
+ README.md | 297 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 297 insertions(+)
+ create mode 100644 README.md
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git add .
+warning: in the working copy of 'service.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git commit -m 'added new changes to service.html'
+[ft/service-redesign 6fa8bbb] added new changes to service.html
+ 1 file changed, 8 insertions(+)
+ create mode 100644 service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/gitarecy/git-exercises-allbundles/pull/new/ft/service-redesign
+remote:
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git add .
+warning: in the working copy of 'service.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git commit -m 'added service.html'
+[main d6f7b19] added service.html
+ 1 file changed, 10 insertions(+)
+ create mode 100644 service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 427 bytes | 427.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gitarecy/git-exercises-allbundles.git
+   ea6e06b..d6f7b19  main -> main
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git diff main
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index f951d07..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,297 +0,0 @@
+-# git-exercises-allbundles
+-
+-## BUNDLE 1
+-
+-### Exercise 1
+-
+-```bash
+-$ cd Desktop/Git-exercises/
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+-$ git init
+-Initialized empty Git repository in C:/Users/LENOVO/Desktop/Git-exercises/.git/
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (master)
+-$ git branch -m master main
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+:...skipping...
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index f951d07..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,297 +0,0 @@
+-# git-exercises-allbundles
+-
+-## BUNDLE 1
+-
+-### Exercise 1
+-
+-```bash
+-$ cd Desktop/Git-exercises/
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+-$ git init
+-Initialized empty Git repository in C:/Users/LENOVO/Desktop/Git-exercises/.git/
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (master)
+-$ git branch -m master main
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+-$ touch file.txt
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ ls
+README.md  file.txt  service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git commit -m 'added service.html'
+[main 2219a87] added service.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gitarecy/git-exercises-allbundles.git
+   d6f7b19..2219a87  main -> main
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git diff main
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index f951d07..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,297 +0,0 @@
+-# git-exercises-allbundles
+-
+-## BUNDLE 1
+-
+-### Exercise 1
+-
+-```bash
+-$ cd Desktop/Git-exercises/
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+-$ git init
+-Initialized empty Git repository in C:/Users/LENOVO/Desktop/Git-exercises/.git/
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (master)
+-$ git branch -m master main
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+-$ touch file.txt
+-
+-LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ ls
+file.txt  service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign|MERGING)
+$ git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign|MERGING)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign|MERGING)
+$ git commit -m 'Merged main branch into ft/service-redesign'
+[ft/service-redesign f8f2a09] Merged main branch into ft/service-redesign
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git diff main
+diff --git a/service.html b/service.html
+index 4711c12..bee656f 100644
+--- a/service.html
++++ b/service.html
+@@ -3,8 +3,12 @@
+ <title>Service</title>
+ </head>
+ <body>
++<<<<<<< HEAD
++<h1>Our Service</h1>
++=======
+ <h1>Our Services</h1>
+ <p>We offer a wide range of services, including...</p>
+ <p>We also offer...</p>
++>>>>>>> main
+ </body>
+ </html>
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ ls
+README.md  file.txt  service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git diff main
+diff --git a/service.html b/service.html
+index 4711c12..f0bec0a 100644
+--- a/service.html
++++ b/service.html
+@@ -3,8 +3,12 @@
+ <title>Service</title>
+ </head>
+ <body>
++<<<<<<< HEAD
++<h1></h1>
++=======
+ <h1>Our Services</h1>
+-<p>We offer a wide range of services, including...</p>
+-<p>We also offer...</p>
++<p></p>
++<p></p>
++>>>>>>> main
+ </body>
+ </html>
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git commit -m 'changes to service '
+[ft/service-redesign 26607b7] changes to service
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git diff main
+diff --git a/service.html b/service.html
+index 4711c12..f0bec0a 100644
+--- a/service.html
++++ b/service.html
+@@ -3,8 +3,12 @@
+ <title>Service</title>
+ </head>
+ <body>
++<<<<<<< HEAD
++<h1></h1>
++=======
+ <h1>Our Services</h1>
+-<p>We offer a wide range of services, including...</p>
+-<p>We also offer...</p>
++<p></p>
++<p></p>
++>>>>>>> main
+ </body>
+ </html>
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git commit -m 'service update'
+[ft/service-redesign 378e2ad] service update
+ 1 file changed, 2 deletions(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git diff main
+diff --git a/service.html b/service.html
+index 4711c12..8a76686 100644
+--- a/service.html
++++ b/service.html
+@@ -3,8 +3,10 @@
+ <title>Service</title>
+ </head>
+ <body>
++<<<<<<< HEAD
++<h1></h1>
++=======
+ <h1>Our Services</h1>
+-<p>We offer a wide range of services, including...</p>
+-<p>We also offer...</p>
++>>>>>>> main
+ </body>
+ </html>
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git commit -m 'service update'
+[ft/service-redesign 43cc854] service update
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git commit -m 'updates on service'
+[main 05a99c3] updates on service
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git push origin main
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git push origin ft/service-redesign
+
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.29 KiB | 101.00 KiB/s, done.
+From https://github.com/gitarecy/git-exercises-allbundles
+   6fa8bbb..acd06ca  ft/service-redesign -> origin/ft/service-redesign
+   2219a87..4459b04  main                -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/service-redesign
+
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git pull
+Auto-merging service.html
+Merge made by the 'ort' strategy.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/service-redesign
+
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git branch --set-upstream-to=origin/ft/service-redesign ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git branch --set-upstream-to=origin/ft/service-redesign ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git pull
+Auto-merging service.html
+Merge made by the 'ort' strategy.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 19, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.25 KiB | 1.25 MiB/s, done.
+Total 13 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 3 local objects.
+To https://github.com/gitarecy/git-exercises-allbundles.git
+   acd06ca..bb311bd  ft/service-redesign -> ft/service-redesign
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git merge main
+Merge made by the 'ort' strategy.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git commit -m 'merging ft/service-redesign to main'
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 550 bytes | 550.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/gitarecy/git-exercises-allbundles.git
+   bb311bd..548a8c5  ft/service-redesign -> ft/service-redesign
+
+```
+
+## Bundle 3
+### Exercise 1
 
 ```bash
 
