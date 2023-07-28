@@ -1066,3 +1066,105 @@ To https://github.com/gitarecy/git-exercises-allbundles.git
 
 
 ```
+
+### Exercise 2
+
+```bash
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git commit -m 'updates'
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git push origin main
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/git-exercises-allbundles.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git pull
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 11 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (11/11), 8.24 KiB | 172.00 KiB/s, done.
+From https://github.com/gitarecy/git-exercises-allbundles
+   4459b04..30daa5f  main       -> origin/main
+Updating d2d21c0..30daa5f
+Fast-forward
+ README.md | 773 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ faq.html  |   9 +
+ 2 files changed, 781 insertions(+), 1 deletion(-)
+ create mode 100644 faq.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git push origin main
+Everything up-to-date
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ ls
+README.md  faq.html  file.txt  service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git commit -m 'changes to home page redesign'
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ touch new.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git add .
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git commit -m 'add new.html to home page redesign'
+[ft/home-page-redesign 542af5f] add new.html to home page redesign
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Desktop/Git-exercises (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 248 bytes | 248.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gitarecy/git-exercises-allbundles/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/gitarecy/git-exercises-allbundles.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
